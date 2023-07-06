@@ -17,7 +17,7 @@ public class Lab1OX {
     public String start;
     public String end;
     public String turn;
-    public String[][] board = {{"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}, {"  |", "  |", " "}};
+    public String[][] board = {{" |", " |", " "}, {" |", " |", " "}, {" |", " |", " "}, {"  |", "  |", " "}};
     
     public void startGame() {
 
@@ -42,10 +42,24 @@ public class Lab1OX {
          row = kb.nextInt();
          System.out.print("Input column : ");
          col = kb.nextInt();
-         while(row>0 && row<4){
-            //  if(!board[row-1][col-1]){
-                 
-            //  }
+         while(((row > 0 && row < 4) && (col > 0 && col < 4))){
+             
+            if (board[row - 1][col - 1].equals("-")) {
+                 board[row - 1][col - 1] = turn.toUpperCase();
+            } else {
+
+                while (((row > 0 && row < 4) && (col > 0 && col < 4)) && (!board[row - 1][col - 1].equals("-"))) {
+
+                    System.out.println("Please Input Again.");
+                    System.out.print("Input row :");
+                    row = kb.nextInt();
+                    System.out.print("Input column :");
+                    col = kb.nextInt();
+
+                }
+
+                return;
+            }
          }
     }
     
@@ -75,6 +89,17 @@ public class Lab1OX {
         }
 
     }
+     public boolean checkDraw() {
+    for (int i = 0; i < board.length; i++) {
+        for (int j = 0; j < board.length; j++) {
+            if (board[i][j].equals("-")) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+       
 
     public void showBoard(){
         for(int i=1; i<board.length; i++) {
@@ -87,6 +112,7 @@ public class Lab1OX {
         }
     
     }
+
     
     public static void main(String[] args) {
         Lab1OX project = new Lab1OX();
