@@ -86,8 +86,12 @@ public class Lab1OX {
         Lab1OX project = new Lab1OX();
        
          Scanner kb = new Scanner(System.in);
-        project.startGame();
-       
+         project.startGame();
+       if (project.play != true) {
+            System.out.println("ByeBye!!");
+            return;
+        }
+       project.showBoard();
         }
         
     }
@@ -95,6 +99,5 @@ public class Lab1OX {
     
     
      
-    
-ั
+
 
