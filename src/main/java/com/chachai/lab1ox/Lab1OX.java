@@ -15,6 +15,26 @@ public class Lab1OX {
     public int col;
     Scanner kb = new Scanner(System.in);
     public boolean play;
+    public String start;
+    public String end;
+    
+    public void startGame() {
+
+        System.out.println("Welcome to  OX game!!!");
+        System.out.print("Start Game??? (y/n): ");
+        start = kb.nextLine().toLowerCase();
+
+        while (!start.equals("n") && !start.equals("y")) {
+            System.out.print("Start Game (y/n): ");
+            start = kb.nextLine().toLowerCase();
+        }
+        if (start.equals("n")) {
+            play = false;
+        } else {
+            play = true;
+        }
+
+    }
     
     public void inputRowAndCol(){
         System.out.print("Input row : ");
@@ -24,6 +44,22 @@ public class Lab1OX {
     }
     
     
+    
+    public void endGame() {
+        System.out.print("Do you want to Exit ??? (y/n): ");
+        end = kb.nextLine().toLowerCase();
+
+        while (!end.equals("n") && !end.equals("y")) {
+            System.out.print("Do you want to Exit ??? (y/n): ");
+            end = kb.nextLine().toLowerCase();
+        }
+        if (end.equals("n")) {
+            play = false;
+        } else {
+            play = true;
+        }
+
+    }
     public static void main(String[] args) {
         
     }
