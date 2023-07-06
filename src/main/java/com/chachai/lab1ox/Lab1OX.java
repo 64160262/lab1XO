@@ -17,6 +17,7 @@ public class Lab1OX {
     public boolean play;
     public String start;
     public String end;
+    public String[][] board = {{"-", "-", "-"}, {"-", "-", "-"}, {"-", "-", "-"}};
     
     public void startGame() {
 
@@ -41,6 +42,11 @@ public class Lab1OX {
          row = kb.nextInt();
          System.out.print("Input column : ");
          col = kb.nextInt();
+         while(row>0 && row<4){
+             if(!board[row-1][col-1]){
+                 
+             }
+         }
     }
     
     
