@@ -17,7 +17,7 @@ public class Lab1OX {
     public String start;
     public String end;
     public String turn;
-    public String[][] board = {{"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}};
+    public String[][] board = {{"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}, {"  |", "  |", " "}};
     
     public void startGame() {
 
