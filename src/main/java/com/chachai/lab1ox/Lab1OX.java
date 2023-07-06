@@ -15,9 +15,10 @@ public class Lab1OX {
     Scanner kb = new Scanner(System.in);
     public boolean play;
     public String start;
+    public String reset;
     public String end;
     public String turn;
-    public String[][] board = {{" |", " |", " "}, {" |", " |", " "}, {" |", " |", " "}, {"  |", "  |", " "}};
+    public String[][] board = {{" _ |", "_ |", "_"}, {" _ |", "_ |", "_"}, {" _ |", "_ |", "_"}, {"   |", "  |", " "}};
     
     public void startGame() {
 
@@ -67,7 +68,7 @@ public class Lab1OX {
     
     public void endGame() {
         System.out.print("Do you want to Exit ??? (y/n): ");
-        end = kb.nextLine().toLowerCase();
+        String end = kb.nextLine().toLowerCase();
 
         while (!end.equals("n") && !end.equals("y")) {
             System.out.print("Do you want to Exit ??? (y/n): ");
@@ -80,6 +81,13 @@ public class Lab1OX {
         }
 
     }
+     public void reset() {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                board[i][j] = "-";
+            }
+        }
+    }
     
     public void nextTurn() {
         if (turn.equals("X")) {
@@ -87,6 +95,12 @@ public class Lab1OX {
         } else {
             turn = "X";
         }
+
+    }
+     public void showTurn() {
+         System.out.println("_________________________");
+         System.out.println("Turn >>> " + turn.toUpperCase());
+        
 
     }
 
