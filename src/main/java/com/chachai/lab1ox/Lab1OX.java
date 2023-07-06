@@ -10,6 +10,10 @@ package com.chachai.lab1ox;
  */
 public class Lab1OX {
 
+    public void checkWin(){
+        if(checkRow()||checkCol())
+    }
+    
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
