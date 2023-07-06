@@ -3,6 +3,7 @@
  */
 
 package com.chachai.lab1ox;
+import java.util.Scanner;
 
 /**
  *
@@ -10,11 +11,36 @@ package com.chachai.lab1ox;
  */
 public class Lab1OX {
 
-    public void checkWin(){
-        if(checkRow()||checkCol())
+
+
+    
+
+    public String[][] list = {{"_ |","_|","_"},{"_ |","_ |","_"},{"_ |","_ |","_"},{"_ |","_ |","_"}};
+    public int row;
+    public int column;
+    
+    Scanner sc = new Scanner(System.in);
+    
+    public void showBoard(){
+        for(int i=1; i<list.length; i++) {
+            for(int j=0; j<list[i].length; j++){
+                System.out.print(list[i][j]+ " ");
+                
+            }
+            System.out.println();
+            
+        }
     }
     
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Lab1OX project = new Lab1OX();
+        project.showBoard();
+        
     }
+        
+    
+    
+     
+    
 }
+
