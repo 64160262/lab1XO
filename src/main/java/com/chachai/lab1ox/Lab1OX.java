@@ -3,6 +3,7 @@
  */
 
 package com.chachai.lab1ox;
+import java.util.Scanner;
 
 import java.util.Scanner;
 
@@ -43,9 +44,9 @@ public class Lab1OX {
          System.out.print("Input column : ");
          col = kb.nextInt();
          while(row>0 && row<4){
-             if(!board[row-1][col-1]){
+            //  if(!board[row-1][col-1]){
                  
-             }
+            //  }
          }
     }
     
@@ -66,7 +67,28 @@ public class Lab1OX {
         }
 
     }
+
+    public void showBoard(){
+        for(int i=1; i<board.length; i++) {
+            for(int j=0; j<board[i].length; j++){
+                System.out.print(board[i][j]+ " ");
+                
+            }
+            System.out.println();
+            
+        }
+    
+    }
+    
     public static void main(String[] args) {
+        Lab1OX project = new Lab1OX();
+        project.showBoard();
         
     }
+        
+    
+    
+     
+    
 }
+
