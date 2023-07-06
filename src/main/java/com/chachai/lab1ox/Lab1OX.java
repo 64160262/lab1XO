@@ -5,8 +5,6 @@
 package com.chachai.lab1ox;
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Lenovo
@@ -18,6 +16,7 @@ public class Lab1OX {
     public boolean play;
     public String start;
     public String end;
+    public String turn;
     public String[][] board = {{"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}, {"_ |", "_ |", "_"}};
     
     public void startGame() {
@@ -64,6 +63,15 @@ public class Lab1OX {
             play = false;
         } else {
             play = true;
+        }
+
+    }
+    
+    public void nextTurn() {
+        if (turn.equals("X")) {
+            turn = "O";
+        } else {
+            turn = "X";
         }
 
     }
