@@ -43,7 +43,7 @@ public class Lab1OX {
          row = kb.nextInt();
          System.out.print("Input column : ");
          col = kb.nextInt();
-         while(row>0 && row<4){
+         while(((row > 0 && row < 4) && (col > 0 && col < 4))){
             //  if(!board[row-1][col-1]){
                  
             //  }
