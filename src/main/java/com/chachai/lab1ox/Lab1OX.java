@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class Lab1OX {
 
-    public int row;
+   public int row;
     public int col;
     Scanner kb = new Scanner(System.in);
     public boolean play = false;
@@ -101,7 +101,7 @@ public class Lab1OX {
                 play = false;
 
             }
-        } else {
+        } if(play == true) {
             if (checkDraw()) {
                 System.out.println("+--------------------+");
                 System.out.println("|    !!! Draw !!!    |");
@@ -176,7 +176,7 @@ public class Lab1OX {
     public void reset() {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
-                board[i][j] = "-";
+                board[i][j] = "_";
             }
         }
         turn = "o";
@@ -197,7 +197,7 @@ public class Lab1OX {
 
     public static void main(String[] args) {
 
-        Lab1OX project = new Lab1OX();
+         Lab1OX project = new  Lab1OX();
         Scanner kb = new Scanner(System.in);
         project.startGame();
         if (project.play == false) {
